@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><link href="http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,300" rel="stylesheet" type="text/css">
+  <!-- SchemaSpy rev 590 -->
+  <title>Welcome - Lingulog Schema Documentation</title>
+  <link rel="stylesheet" href="schemaSpy.css" type="text/css">
+  <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+  <script LANGUAGE="JavaScript" TYPE="text/javascript" SRC="jquery.js"></script>
+  <script LANGUAGE="JavaScript" TYPE="text/javascript" SRC="schemaSpy.js"></script>
+  <script LANGUAGE="JavaScript" TYPE="text/javascript">
+    $(function(){
+      associate($('#showTables'), $('.tbl'));
+      associate($('#showViews'),  $('.view'));
+      jQuery.fn.alternateRowColors = function() {
+        $('tbody tr:visible').each(function(i) {
+          if (i % 2 == 0) {
+            $(this).removeClass('even').addClass('odd');
+          } else {
+            $(this).removeClass('odd').addClass('even');
+          }
+        });
+        return this;
+      };
+      $('#showTables, #showViews').click(function() {
+        $('table.dataTable').alternateRowColors();
+      });
+      $('table.dataTable').alternateRowColors();
+    })
+  </script>
+</head>
+<body>
+<table id="headerHolder" cellspacing="0" cellpadding="0"><tr><td>
+<div id="header">
+ <ul>
+  <li id="current"><a href="index.html" title="All tables and views in the schema">Tables</a></li>
+  <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+  
+  <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+  
+  <li><a href="columns.byTable.html" title="All of the columns in the schema">Columns</a></li>
+  
+ </ul>
+</div>
+</td></tr></table>
+<div class="content" style="clear:both;"><table border="0" width="100%" style="margin-bottom: 10px"><tr><td><h1 id="lingulog-database-schema-documentation">Lingulog Database Schema Documentation</h1>
+</td></tr></table>
+
+
+<div class="indent">
+<p><b><label for="showTables" style="display:none;"><input type="checkbox" id="showTables" checked></label>
+ <label for="showComments"><input type="checkbox" id="showComments">Comments</label>
+</b>
+<table class="dataTable" border="1" rules="groups">
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup class="comment">
+<thead align="left">
+<tr>
+  <th valign="bottom">Table</th>
+  <th align="right" valign="bottom">Children</th>
+  <th align="right" valign="bottom">Parents</th>
+  <th align="right" valign="bottom">Columns</th>
+  <th align="right" valign="bottom">Rows</th>
+  <th class="comment" align="left" valign="bottom">Comments</th>
+</tr>
+</thead>
+<tbody>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/activity.html">activity</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">1</td>
+  <td class="detail" align="right">7</td>
+  <td class="detail" align="right">105,902</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/address.html">address</a></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">13</td>
+  <td class="detail" align="right">14</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/comment.html">comment</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">4</td>
+  <td class="detail" align="right">8</td>
+  <td class="detail" align="right">0</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/invitation.html">invitation</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">7</td>
+  <td class="detail" align="right">35</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/language.html">language</a></td>
+  <td class="detail" align="right">7</td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">236</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/organization.html">organization</a></td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">1</td>
+  <td class="detail" align="right">5</td>
+  <td class="detail" align="right">4</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/organization_user.html">organization_user</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">20</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/progress.html">progress</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">4</td>
+  <td class="detail" align="right">6</td>
+  <td class="detail" align="right">62,282</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/project.html">project</a></td>
+  <td class="detail" align="right">8</td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">8</td>
+  <td class="detail" align="right">52</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/project_favourite.html">project_favourite</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">14</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/project_language.html">project_language</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">171</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/project_task.html">project_task</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">364</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/project_user.html">project_user</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">160</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/translation_field.html">translation_field</a></td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">5</td>
+  <td class="detail" align="right">12,929</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/translation_group.html">translation_group</a></td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">4</td>
+  <td class="detail" align="right">2,035</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/translation_value.html">translation_value</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">6</td>
+  <td class="detail" align="right">53,904</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/user.html">user</a></td>
+  <td class="detail" align="right">7</td>
+  <td class="detail" align="right">1</td>
+  <td class="detail" align="right">7</td>
+  <td class="detail" align="right">45</td>
+  <td class="comment detail"></td>
+  </tr>
+ <tr class="tbl" valign="top">  <td class="detail"><a href="tables/user_language.html">user_language</a></td>
+  <td class="detail" align="right"></td>
+  <td class="detail" align="right">2</td>
+  <td class="detail" align="right">3</td>
+  <td class="detail" align="right">30</td>
+  <td class="comment detail"></td>
+  </tr>
+  <tr>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="comment detail">&nbsp;</td>
+  </tr>
+  <tr class="tbl">
+    <td class="detail"><b>18 Tables</b></td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail" align="right"><b>94</b></td>
+    <td class="detail" align="right"><b>238,197</b></td>
+    <td class="comment detail">&nbsp;</td>
+  </tr>
+  <tr class="view">
+    <td class="detail"><b>0 Views</b></td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail">&nbsp;</td>
+    <td class="detail" align="right"><b>0</b></td>
+    <td class="detail">&nbsp;</td>
+    <td class="comment detail">&nbsp;</td>
+  </tr>
+</tbody></colgroup></colgroup></colgroup></colgroup></colgroup></colgroup></table>
+</p></div>
+</div><div id="footer">
+	<div>Copyright &copy; 2012-2016 <a href="http://www.lingulog.com">Lingulog.com</a> All rights reserved.</div>
+	<div style="clear:both"></div>
+</div>
+</body>
+</html>

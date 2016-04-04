@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head><link rel="icon" href="../favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"><link href="http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,300" rel="stylesheet" type="text/css">
+  <!-- SchemaSpy rev 590 -->
+  <title>translation_group - Lingulog Schema Documentation</title>
+  <link rel="stylesheet" href="../schemaSpy.css" type="text/css">
+  <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+  <script LANGUAGE="JavaScript" TYPE="text/javascript" SRC="../jquery.js"></script>
+  <script LANGUAGE="JavaScript" TYPE="text/javascript" SRC="../schemaSpy.js"></script>
+  <script LANGUAGE="JavaScript" TYPE="text/javascript">
+    table='translation_group';
+  </script>
+</head>
+<body>
+<table id="headerHolder" cellspacing="0" cellpadding="0"><tr><td>
+<div id="header">
+ <ul>
+  <li><a href="../index.html" title="All tables and views in the schema">Tables</a></li>
+  <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+  
+  <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+  
+  <li><a href="../columns.byTable.html" title="All of the columns in the schema">Columns</a></li>
+  
+ </ul>
+</div>
+</td></tr></table>
+<div class="content" style="clear:both;"><h1>Table: translation_group</h1><h2>Columns</h2>
+
+<table width="100%" border="0">
+<tr valign="top"><td class="container" align="left" valign="top">
+<form name="options" action="">
+ <label for="showRelatedCols"><input type="checkbox" id="showRelatedCols">Related columns</label>
+ <label for="showConstNames"><input type="checkbox" id="showConstNames">Constraints</label>
+ <label for="showComments"><input type="checkbox" id="showComments">Comments</label>
+ <label for="showLegend"><input type="checkbox" checked id="showLegend">Legend</label>
+</form>
+</td><td class="container" rowspan="2" align="right" valign="top">
+ <table class="legend" border="0">
+  <tr>
+   <td class="dataTable" valign="bottom">Legend:</td>
+   <td class="container" align="right" valign="top"></td>
+  </tr>
+  <tr><td class="container" colspan="2">
+   <table class="dataTable" border="1">
+    <tbody>
+    <tr><td class="primaryKey">Primary key columns</td></tr>
+    <tr><td class="indexedColumn">Columns with indexes</td></tr>
+    <tr class="impliedRelationship"><td class="detail"><span class="impliedRelationship">Implied relationships</span></td></tr>
+    <tr><td class="excludedColumn">Excluded column relationships</td></tr>
+    <tr><td class="legendDetail">&lt; <em>n</em> &gt; number of related tables</td></tr>
+   </tbody></table>
+  </td></tr>
+ </table>
+<div style="margin-right: 2pt;">
+
+
+</div>
+&nbsp;
+</td></tr><tr valign="top"><td class="container" align="left" valign="top">
+<a name="columns"></a>
+<table id="columns" class="dataTable" border="1" rules="groups">
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup>
+<colgroup class="comment">
+<thead align="left">
+<tr>
+  <th>Column</th>
+  <th>Type</th>
+  <th>Size</th>
+  <th title="Are nulls allowed?">Nulls</th>
+  <th title="Is column automatically updated?">Auto</th>
+  <th title="Default value">Default</th>
+  <th title="Columns in tables that reference this column"><span class="notSortedByColumn">Children</span></th>
+  <th title="Columns in tables that are referenced by this column"><span class="notSortedByColumn">Parents</span></th>
+  <th title="Comments" class="comment"><span class="notSortedByColumn">Comments</span></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="even">
+ <td class="primaryKey" title="Primary Key">id</td>
+ <td class="detail">serial</td>
+ <td class="detail" align="right">10</td>
+ <td class="detail" align="center"></td>
+ <td class="detail" align="center" title="Automatically updated by the database">&nbsp;&radic;&nbsp;</td>
+ <td class="detail" align="right">nextval('lilo_translation_group_id_seq'::regclass)</td>
+ <td class="detail">
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+   <tr class="relative even" valign="top">
+    <td class="relatedTable detail" title="progress.translation_group_id refs translation_group.id via fk_progress_translation_group"><a href="progress.html">progress</a><span class="relatedKey">.translation_group_id</span>
+    </td>
+    <td class="constraint detail">fk_progress_translation_group<span title="Cascade on delete:
+ Deletion of parent deletes child">&nbsp;C</span></td>
+   </tr>
+   <tr class="relative even" valign="top">
+    <td class="relatedTable detail" title="translation_field.translation_group_id refs translation_group.id via fk_translation_field_translation_group"><a href="translation_field.html">translation_field</a><span class="relatedKey">.translation_group_id</span>
+    </td>
+    <td class="constraint detail">fk_translation_field_translation_group<span title="Cascade on delete:
+ Deletion of parent deletes child">&nbsp;C</span></td>
+   </tr>
+   <tr class="relative even" valign="top">
+    <td class="relatedTable detail" title="translation_group.translation_group_id refs translation_group.id via fk_translation_group_translation_group"><a href="translation_group.html">translation_group</a><span class="relatedKey">.translation_group_id</span>
+    </td>
+    <td class="constraint detail">fk_translation_group_translation_group<span title="Cascade on delete:
+ Deletion of parent deletes child">&nbsp;C</span></td>
+   </tr>
+  </table>
+</td>
+ <td class="detail"> </td>
+ <td class="comment detail"></td>
+</tr>
+<tr class="odd">
+ <td class="detail">translation_group_id</td>
+ <td class="detail">int4</td>
+ <td class="detail" align="right">10</td>
+ <td class="detail" align="center" title="nullable">&nbsp;&radic;&nbsp;</td>
+ <td class="detail" align="center"></td>
+ <td class="detail" align="right">null</td>
+ <td class="detail"></td>
+ <td class="detail">
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+   <tr class="relative odd" valign="top">
+    <td class="relatedTable detail" title="translation_group.translation_group_id refs translation_group.id via fk_translation_group_translation_group"><a href="translation_group.html">translation_group</a><span class="relatedKey">.id</span>
+    </td>
+    <td class="constraint detail">fk_translation_group_translation_group<span title="Cascade on delete:
+ Deletion of parent deletes child">&nbsp;C</span></td>
+   </tr>
+  </table>
+ </td>
+ <td class="comment detail"></td>
+</tr>
+<tr class="even">
+ <td class="indexedColumn" title="Indexed">project_id</td>
+ <td class="detail">int4</td>
+ <td class="detail" align="right">10</td>
+ <td class="detail" align="center"></td>
+ <td class="detail" align="center"></td>
+ <td class="detail"></td>
+ <td class="detail"></td>
+ <td class="detail">
+  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+   <tr class="relative even" valign="top">
+    <td class="relatedTable detail" title="translation_group.project_id refs project.id via fk_translation_group_project"><a href="project.html">project</a><span class="relatedKey">.id</span>
+    </td>
+    <td class="constraint detail">fk_translation_group_project<span title="Cascade on delete:
+ Deletion of parent deletes child">&nbsp;C</span></td>
+   </tr>
+  </table>
+ </td>
+ <td class="comment detail"></td>
+</tr>
+<tr class="odd">
+ <td class="detail">name</td>
+ <td class="detail">varchar</td>
+ <td class="detail" align="right">255</td>
+ <td class="detail" align="center"></td>
+ <td class="detail" align="center"></td>
+ <td class="detail"></td>
+ <td class="detail"></td>
+ <td class="detail"> </td>
+ <td class="comment detail"></td>
+</tr>
+</tbody></colgroup></colgroup></colgroup></colgroup></colgroup></colgroup></colgroup></colgroup></colgroup></table>
+<p title="4 columns">Table contained 2,035 rows at Mon Apr 04 23:14 CEST 2016</p><p></p>
+</td></tr></table>
+<div class="indent">
+<b>Indexes:</b>
+<table class="dataTable" border="1" rules="groups"><colgroup><colgroup><colgroup><colgroup>
+<thead>
+ <tr>
+  <th>Column(s)</th>
+  <th>Type</th>
+  <th>Sort</th>
+  <th class="constraint" style="text-align:left;">Constraint Name</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+  <td class="primaryKey">id</td>
+  <td class="detail">Primary key</td>
+  <td class="detail" style="text-align:left;"><span title="Ascending">Asc</span></td>
+  <td class="constraint" style="text-align:left;">lilo_translation_group_pkey</td>
+ </tr>
+ <tr>
+  <td class="indexedColumn">project_id</td>
+  <td class="detail">Performance</td>
+  <td class="detail" style="text-align:left;"><span title="Ascending">Asc</span></td>
+  <td class="constraint" style="text-align:left;">fk_translation_group_project_idx</td>
+ </tr>
+</tbody></colgroup></colgroup></colgroup></colgroup></table>
+</div>
+<table width="100%" border="0"><tr><td class="container">
+<br><form action="get"><b>Close relationships</b><span class="degrees" id="degrees" title="Detail diminishes with increased separation from translation_group">
+&nbsp;within <label for="oneDegree"><input type="radio" name="degrees" id="oneDegree" checked>one</label>  <label for="twoDegrees"><input type="radio" name="degrees" id="twoDegrees">two degrees</label> of separation</span><b>:</b></form>
+<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="progress.html" title="progress" alt="" coords="719,28,880,220">
+<area shape="rect" id="node2" href="project.html" title="project" alt="" coords="5,169,167,407">
+<area shape="rect" id="node3" href="translation_field.html" title="translation_field" alt="" coords="511,73,675,242">
+<area shape="rect" id="node4" href="translation_group.html" title="translation_group" alt="" coords="211,29,467,181">
+</map>
+  <a name="diagram"><img id="oneDegreeImg" src="../diagrams/translation_group.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" alt="" align="left"></a>
+<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="comment.html" title="comment" alt="" coords="917,107,1033,185">
+<area shape="rect" id="node2" href="language.html" title="language" alt="" coords="5,615,137,693">
+<area shape="rect" id="node3" href="project.html" title="project" alt="" coords="181,371,343,609">
+<area shape="rect" id="node4" href="translation_field.html" title="translation_field" alt="" coords="687,313,851,483">
+<area shape="rect" id="node6" href="organization.html" title="organization" alt="" coords="7,275,135,353">
+<area shape="rect" id="node8" href="translation_group.html" title="translation_group" alt="" coords="387,198,643,350">
+<area shape="rect" id="node5" href="invitation.html" title="invitation" alt="" coords="453,5,577,84">
+<area shape="rect" id="node7" href="progress.html" title="progress" alt="" coords="895,335,1056,527">
+<area shape="rect" id="node9" href="project_language.html" title="project_language" alt="" coords="444,537,585,616">
+<area shape="rect" id="node10" href="project_task.html" title="project_task" alt="" coords="449,633,581,712">
+<area shape="rect" id="node11" href="project_user.html" title="project_user" alt="" coords="449,368,581,447">
+<area shape="rect" id="node12" href="translation_value.html" title="translation_value" alt="" coords="899,640,1051,719">
+</map>
+
+  <a name="diagram"><img id="twoDegreesImg" src="../diagrams/translation_group.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" alt="" align="left"></a>
+</td></tr></table>
+</div>
+<div id="footer">
+	<div>Copyright &copy; 2012-2016 <a href="http://www.lingulog.com">Lingulog.com</a> All rights reserved.</div>
+	<div style="clear:both"></div>
+</div>
+</body>
+</html>
